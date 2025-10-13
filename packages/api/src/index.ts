@@ -1,7 +1,8 @@
-import { Link } from 'links/entities/link.entity';
+import { Link } from './shared/entities/link.entity';
 
-import { CreateLinkDto } from 'links/dto/create-link.dto';
-import { UpdateLinkDto } from 'links/dto/update-link.dto';
+import { createDataSource } from './shared/database/data-source';
+import { CreateLinkDto } from './shared/dto/create-link.dto';
+import { UpdateLinkDto } from './shared/dto/update-link.dto';
 
 export const links = {
   dto: {
@@ -11,4 +12,7 @@ export const links = {
   entities: {
     Link,
   },
+  database: {
+    createDataSource
+  }
 };
